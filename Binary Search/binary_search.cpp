@@ -11,8 +11,7 @@
     The function returns the index of the target value, or -1 if it is not found.
     The driver code prints the result of the search to the console.
 */
-#include <iostream>
-#include <vector>
+#include<bits/stdc++.h> //for including all the libraries //
 
 using namespace std;
 
@@ -20,12 +19,12 @@ using namespace std;
 // Takes in a sorted vector of integers and a target value to search for
 // Returns the index of the target value if found, -1 otherwise
 int binarySearch(vector<int> arr, int target) {
-    int left = 0;
-    int right = arr.size() - 1;
+    int start = 0; //starting index//
+    int end = arr.size() - 1;  //ending index//
     
     // Loop until left and right pointers meet
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
+    while (start <= end) {
+        int mid = start + (end - start) / 2;  // why this? we also take this mid=start+end/2 but we take this because it doesnt exceed integer value//
         
         // If the target is found, return the index
         if (arr[mid] == target) {
